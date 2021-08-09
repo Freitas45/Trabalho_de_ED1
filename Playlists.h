@@ -1,0 +1,6 @@
+
+
+#ifndef PLAYLISTS_H
+#define PLAYLISTS_H
+
+#endif //TRABALHO_DE_ED1_PLAYLISTS_H
