@@ -19,3 +19,5 @@ void InsereLista_pessoas(lista* Lista, Pessoa* p);
 void DestroiLista_pessoas(lista* l);
 
 void LeArqAmizade(lista* l);
+
+#endif //LISTA_H
