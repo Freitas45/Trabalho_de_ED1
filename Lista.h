@@ -8,7 +8,7 @@ typedef struct Lista lista;
 
 typedef struct Celula cel;
 
-Lista* inicia_lista();
+lista* inicia_lista();
 
 void InsereLista_pessoas(lista* Lista, Pessoa* p);
 

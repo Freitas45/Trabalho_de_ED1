@@ -11,21 +11,21 @@ struct Celula
 struct Lista
 {
     cel* prim;
-    cel*prox;
+    cel* prox;
 };
 
 lista* inicia_lista(){
   lista* l = (lista*) malloc (sizeof(lista));
-  lista->prim = NULL;
-  lista->ult = NULL;
+  l->prim = NULL;
+  l->prox = NULL;
   return l;
 }
 
 void InsereLista_pessoas(lista* Lista, Pessoa* p){
   cel *nova = (cel*) malloc (sizeof(cel));
   nova->dado = p;
-  nova->prox = lista->prim;
-  Lista->ult = nova;
+  nova->prox = Lista->prim;
+  Lista->prox = nova;
   if(Lista->prim == NULL){
             Lista->prim = nova;
         }
@@ -50,11 +50,11 @@ void LeArqAmizade(lista* l){
       }
       if(n = 1){
         nome = strdup(strtok(aux, ";"));
-        amigo = strdup(amigo,"\n");
+        amigo = strdup(strtok(NULL,"\n"));
         p = ProcuraPessoa(nome);
         a = ProcuraPessoa(amigo);
         InsereAmizade(p,a);
-        printf("%s\n",p->nome);
+        printf("%s\n",nome);
       }
   }
 }

@@ -1,16 +1,18 @@
 
 #include "Pessoas.h"
+#include "Lista.h"
 
-struct Pessoa
+struct Pessoas
 {
     char* nome;
-    Lista* amizade;
+    lista* amizade;
 
 };
 
 Pessoa* InserePessoa(char* nome){
+  lista* a;
   Pessoa* p = (Pessoa*) malloc(sizeof(Pessoa));
-  p->amizade = (Lista*) malloc(sizeof(Lista));
+  p->amizade = inicia_lista();
   return p;
 }
 
