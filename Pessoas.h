@@ -8,9 +8,15 @@
 
 typedef struct Pessoas Pessoa;
 
+
 Pessoa* InserePessoa(char* nome);
 
-Pessoa* InsereAmizade(Pessoa* p);
+void InsereAmizade(Pessoa* p, Pessoa* amigo);
+
+Pessoa* ProcuraPessoa(char* nome);
+
+char* VoltaNome();
+
 
 
 #endif //PESSOAS_H
