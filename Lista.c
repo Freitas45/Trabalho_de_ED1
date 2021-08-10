@@ -31,6 +31,18 @@ void InsereLista_pessoas(lista* Lista, Pessoa* p){
         }
 }
 
+Pessoa* ProcuraPessoa(lista* l,char* nome){
+  cel* p;
+  Pessoa* pes;
+  for(p = l->prim ; p!=NULL;p = p->prox){
+        pes = confere_pessoa(p->dado,nome);
+        if(pes!= NULL){
+            break;
+        }
+    }
+    return pes;
+}
+
 void LeArqAmizade(lista* l){
   Pessoa* p,*a;
   char* aux,*nome,*amigo;

@@ -18,6 +18,8 @@ void InsereLista_pessoas(lista* Lista, Pessoa* p);
 
 void DestroiLista_pessoas(lista* l);
 
+Pessoa* ProcuraPessoa(lista* l,char* nome);
+
 void LeArqAmizade(lista* l);
 
 #endif //LISTA_H
