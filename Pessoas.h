@@ -14,9 +14,9 @@ Pessoa* InserePessoa(char* nome);
 
 void InsereAmizade(Pessoa* p, Pessoa* amigo);
 
-Pessoa* ProcuraPessoa(char* nome);
+Pessoa* confere_pessoa(Pessoa* p,char* n);
 
-char* VoltaNome();
+Pessoa* ProcuraPessoa(lista* l,char* nome);
 
 
 

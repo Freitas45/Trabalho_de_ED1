@@ -51,8 +51,8 @@ void LeArqAmizade(lista* l){
       if(n = 1){
         nome = strdup(strtok(aux, ";"));
         amigo = strdup(strtok(NULL,"\n"));
-        p = ProcuraPessoa(nome);
-        a = ProcuraPessoa(amigo);
+        p = ProcuraPessoa(l,nome);
+        a = ProcuraPessoa(l,amigo);
         InsereAmizade(p,a);
         printf("%s\n",nome);
       }
