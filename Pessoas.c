@@ -1,6 +1,9 @@
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 
 #include "Pessoas.h"
+
+struct Pessoa
+{
+    char* nome;
+    Lista
+    
+};
