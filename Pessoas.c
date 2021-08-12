@@ -8,9 +8,10 @@ struct Pessoas
 
 };
 
-Pessoa* InserePessoa(char* nome){
-  lista* a;
+Pessoa* InserePessoa(char* n){
   Pessoa* p = (Pessoa*) malloc(sizeof(Pessoa));
+  p->nome = (char*) malloc((strlen(n)+1) * sizeof(char));
+  strcpy(p->nome,n);
   p->amizade = inicia_lista();
   return p;
 }
@@ -26,4 +27,8 @@ Pessoa* confere_pessoa(Pessoa* p,char* n){
   }else{
     return NULL;
   }
+}
+
+void printa_nome(Pessoa* p){
+  printf("%s\n",p->nome);
 }
