@@ -45,14 +45,17 @@ Pessoa* ProcuraPessoa(lista* l,char* nome){
 
 void LeArqAmizade(lista* l){
   Pessoa* p,*a;
-  char* aux,*nome[] = "kasjkas",*amigo;
+  char* aux,*nome,*amigo;
   FILE* ami;
   int n = 0;
-  p = ProcuraPessoa(l,nome);
-  printf("%s\n",nome);
-
-  // ami = fopen("amizade.txt","r");
-  //
+  ami = fopen("amizade.txt","r");
+  // fscanf(ami,"%[^/n]",aux);
+  while(fgets(aux,sizeof(aux),ami)!=NULL){
+      printf("%s\n",aux);
+      nome = strdup(strtok(aux, ";"));
+        // printf("%s",nome);
+  }
+  fclose(ami);
   // while(fgets(aux,sizeof(aux),ami)!=NULL){
   //     if(n = 0){
   //       nome = strdup(strtok(aux, ";"));
