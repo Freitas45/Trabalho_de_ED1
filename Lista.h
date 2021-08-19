@@ -1,13 +1,27 @@
 
 #ifndef LISTA_H
 #define LISTA_H
-#include "Pessoas.h"
-#include "Playlists.h"
+
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+
+
+typedef struct Pessoas Pessoa;
+
+Pessoa* InserePessoa(char* nome);
+
+void InsereAmizade(Pessoa* p, Pessoa* amigo);
+
+Pessoa* confere_pessoa(Pessoa* p,char* n);
+
+void printa_nome(Pessoa* p);
 
 typedef struct Lista lista;
 
 typedef struct Celula cel;
 
+cel* retornaCelula(lista* l,char *nome);
 lista* inicia_lista();
 
 void InsereLista_pessoas(lista* Lista, Pessoa* p);
